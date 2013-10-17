@@ -10,7 +10,14 @@ get '/' do
 end
 
 get %r{/(\d{4})$} do |train|
-	"#{train_status(train)}"
+	@train = train
+	@status = train_status(train)
+
+	if @status.include?(:error)
+		erb :'error.html'
+	else
+		erb :'status.html'
+	end
 end
 
 def train_status(train_number)
