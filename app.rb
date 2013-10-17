@@ -9,7 +9,7 @@ get '/' do
 	erb :'index.html'
 end
 
-get %r{/(\d{4})$} do |train|
+get %r{/(.+)$} do |train|
 	@train = train
 	@status = train_status(train)
 
