@@ -5,7 +5,7 @@
 		<title>Train Status</title>
 		<link href="track.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
+	<body style="<%= @status[:style] %>">
 		<div class="status">
 			<%= @status[:status] %>
 		</div>

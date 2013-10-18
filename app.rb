@@ -34,7 +34,8 @@ def train_status(train_number)
 				track: data[4],
 				line: data[6],
 				train: data[8],
-				status: data[10]
+				status: data[10],
+				style: row.attributes['style']
 			}
 		end
 	end
