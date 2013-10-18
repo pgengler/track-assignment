@@ -1,0 +1,12 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+div.status {
+	font-size: 48pt;
+}
+
+div.track {
+	font-size: 144pt;
+}
