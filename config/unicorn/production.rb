@@ -1,4 +1,4 @@
-root = "/srv/apps/track"
+root = "/srv/apps/track-assignment/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
