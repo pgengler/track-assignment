@@ -22,11 +22,11 @@ end
 
 def train_status(train_number)
 	doc = Nokogiri::HTML(open(URL, "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20100101 Firefox/23.0"))
-
 	rows = doc.xpath('//tr').drop(2)
 
 	rows.each do |row|
 		data = row.children.map(&:content).map(&:strip)
+		data.shift
 		if data[8] == train_number
 			return {
 				time: data[0],
